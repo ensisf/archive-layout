@@ -1,0 +1,48 @@
+//only vertical resize for textareas
+textarea {
+    resize: vertical;
+    min-height: 200px;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, .15);
+    background-image: none;
+    background-color: #fff;
+    outline: none;
+    border-radius: 0;
+    font: inherit;
+    color: inherit;
+    transition: border-color ease-in-out 0.2s;
+
+    &:focus{
+      border-color: $theme-color;
+    }
+
+    @include placeholder;
+    @include placeholder--focus;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+//styles for disabled elements
+[disabled],
+button[disabled],
+html input[disabled] {
+    cursor: not-allowed;
+    opacity: 0.8;
+    user-select: none;
+}
+
+input[type='submit']{
+  border: none;
+  background: none;
+  transition: background-color 0.3s;
+
+  &:hover{
+
+  }
+}

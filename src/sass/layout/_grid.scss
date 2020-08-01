@@ -1,0 +1,37 @@
+// grid
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: $container-width + $gutter + px;
+  padding-left: $gutter/2 + px;
+  padding-right: $gutter/2 + px;
+}
+
+.row {
+  position: relative;
+  margin-left: $gutter/-2 + px;
+  margin-right: $gutter/-2 + px;
+  flex-wrap: wrap;
+  @include min("xs") {
+    display: flex;
+  }
+}
+
+.col {
+  padding-left: $gutter/2 + px;
+  padding-right: $gutter/2 + px;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@each $key, $val in $breakpoints {
+  @include min($val) {
+    @for $i from 1 through 12 {
+      .col-#{$key}-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+  }
+}

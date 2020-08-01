@@ -1,0 +1,80 @@
+.btn{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &--menu{
+    $btn-height: 28;
+    $btn-width: 38;
+    $l-height: 4;
+    @include size(em($btn-width), em($btn-height));
+    font-size: 17px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    .lines{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: em($l-height);
+      top: em($btn-height/2 - $l-height/2);
+      background: currentColor;
+      transition: all 0.3s;
+    }
+
+    &::after,
+    &::before{
+      position: absolute;
+      left: 0;
+      content: '';
+      background-color: currentColor;
+      height: em($l-height);
+      width: 100%;
+      transform-origin: 50% 50%;
+      transform: translate(0, 0);
+      transition: all 0.3s;
+    }
+
+    &::after{
+      bottom: 0;
+    }
+
+    &::before{
+      top: 0;
+    }
+
+    &:hover{
+
+      &::after{
+        transform: translateY(-2px);
+      }
+
+      &::before{
+        transform: translateY(2px);
+      }
+    }
+
+    &.opened{
+
+      .lines{
+        transform: scale(0);
+      }
+
+      &::after{
+        transform: translateY(em(-($btn-height/2 - $l-height/2))) rotate(45deg);
+      }
+
+      &::before{
+        transform: translateY(em($btn-height/2 - $l-height/2)) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.new-card {
+  background: #fff;
+  color: rgba(#1a283a, 0.66);
+
+  &__img {
+    height: 337px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__ttl {
+    color: #1a283a;
+    font-weight: bold;
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+    @include min("md") {
+      font-size: 36px;
+    }
+  }
+  &__content {
+  }
+  &__box {
+    padding: 0 20px 20px;
+
+    @include min("md") {
+      padding: 0 50px 45px;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__views {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+  &__date {
+    font-weight: 500;
+  }
+}

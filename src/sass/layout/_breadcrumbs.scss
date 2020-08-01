@@ -1,0 +1,36 @@
+.breadcrumbs{
+	margin-top: 30px;
+}
+
+.breadcrumbs__list{
+
+	span,
+	a{
+		font-style: italic;
+		font-size: 16px;
+		display: inline-block;
+	}
+
+	> span{
+		margin-top: 15px;
+	}
+
+	> span:not(:last-child),
+	a{
+		color: #919191;
+	}
+
+	> span:last-child{
+		color: #2c2c2c;
+	}
+
+	> span:not(:last-child)::after{
+		content: '/';
+	}
+
+	> span:not(:last-child):hover,
+	> span:not(:last-child) a:hover{
+		color: #5d7e28;
+	}
+
+}

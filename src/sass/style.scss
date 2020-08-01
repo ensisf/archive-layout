@@ -1,0 +1,57 @@
+@import "utils/_mixins.scss";
+@import "utils/_vars.scss";
+
+@charset 'UTF-8';
+//==========BASE==========//
+// @import 'vendors/reset/_reset';
+
+@import "vendors/reset/_normalize";
+// @import 'base/_devs';
+@import "components/_sprite-generated.scss";
+@import "base/_base";
+
+//==========COMPONENTS==========//
+@import "components/_btn";
+@import "components/_new-card";
+@import "components/_archive-card";
+
+//==========LAYOUT==========//
+@import "layout/_grid";
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_nav";
+// @import 'layout/_social';
+// @import 'layout/_modals';
+// @import 'layout/_sidebar';
+// @import 'layout/_titles';
+@import "layout/_forms";
+// @import 'layout/_breadcrumbs';
+// @import 'layout/_pagination';
+// @import 'layout/_sliders';
+
+//==========PAGES==========//
+@import "pages/_index";
+@import "pages/_about";
+// @import 'pages/_contacts';
+// @import 'pages/_blog';
+// @import 'pages/_single';
+
+//==========VENDORS==========//
+// magnific-popup//
+// @import 'vendors/mfp/_magnific-popup';
+
+//Date picker//
+// @import 'vendors/pickmeup/_pickmeup';
+
+//slick//
+// @import 'vendors/slick/_slick';
+// @import 'vendors/slick/_slick-theme';
+
+//fotorama//
+// @import 'vendors/fotorama/_fotorama';
+
+//animate//
+// @import 'vendors/animate/_animate';
+
+//bootstrap-grid//
+// @import 'vendors/bootstrap_grid/_bootstrap';

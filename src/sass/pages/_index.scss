@@ -1,0 +1,139 @@
+.section {
+  padding: 50px 0;
+
+  @include min("xl") {
+    padding: 170px 0 185px;
+  }
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &__ttl {
+    margin-top: 0;
+    line-height: 1.2;
+    font-size: 35px;
+
+    @include min("sm") {
+      font-size: 72px;
+    }
+
+    i {
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.last-news {
+  background-image: url(../img/images/last-news-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+  overflow: hidden;
+
+  .row {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/images/last-news.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      pointer-events: none;
+      left: 45%;
+      top: -150px;
+      width: 350px;
+      height: 350px;
+      z-index: 1;
+    }
+  }
+}
+
+.index-stat {
+  @include min("sm") {
+    display: flex;
+    align-items: baseline;
+  }
+  text-align: center;
+
+  &__number {
+    color: #e9c44d;
+    font-weight: 500;
+    font-size: 125px;
+    margin-right: 10px;
+
+    @include max("sm") {
+      line-height: 1;
+    }
+  }
+  &__text {
+    font-size: 30px;
+    color: rgba($theme-color, 0.66);
+  }
+}
+
+.index-stats {
+  padding-bottom: 95px;
+
+  .section__ttl {
+    margin-bottom: 20px;
+  }
+  .row {
+    justify-content: center;
+    @include min("xl") {
+      justify-content: space-between;
+    }
+  }
+
+  .col {
+    @include min("xl") {
+      width: auto !important;
+    }
+    @include max("sm") {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.digit-archive {
+  background-image: url(../img/images/digit-archive-bg.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  overflow: hidden;
+
+  @include min("lg") {
+    .col {
+      &:nth-child(2) {
+        padding-top: 130px;
+      }
+      &:nth-child(3) {
+        transform: translateY(-130px);
+      }
+    }
+  }
+
+  .row {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/images/digit-archive.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      pointer-events: none;
+      left: -105px;
+      top: 0;
+      width: 275px;
+      height: 340px;
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,351 @@
+//==========TRIMMING TEXT==========//
+
+@mixin text_ellipsis($overflow: ellipsis) {
+  // values are: clip, ellipsis, or a string
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow;
+}
+
+////////////////////////////////////////////////////////////////PX TO REM/EM
+
+@function rem($pxsize) {
+  @return ($pxsize/$root-font-size) + rem;
+}
+
+@function em($pxsize, $parent-size: $root-font-size) {
+  @return ($pxsize/$parent-size) + em;
+}
+
+///////////////////////////////////////////////////////////////SELECTION
+
+@mixin selection {
+  &::selection {
+    @content;
+  }
+}
+
+//////////////////////////////////////////////////////////////////CLEARFIX
+
+@mixin cf {
+  &::after,
+  &::before {
+    content: "";
+    display: table;
+    width: 100%;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+//==========FONT SMOOTHING==========//
+
+@mixin font_smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-smoothing: $value;
+    -ms-font-smoothing: $value;
+    -o-font-smoothing: $value;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    -moz-font-smoothing: $value;
+    -ms-font-smoothing: $value;
+    -o-font-smoothing: $value;
+  }
+}
+
+//==========ABSILUTE PSEUDO==========//
+
+@mixin absolut_pseudo {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+}
+
+//==========COVER LAYER==========//
+
+@mixin coverlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+//==========CENTER BLOCK==========//
+
+@mixin center_block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//==========SCROLLBAR==========//
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    @content;
+  }
+}
+
+@mixin scrollbar-track {
+  &::-webkit-scrollbar-track {
+    @content;
+  }
+}
+
+@mixin scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
+    @content;
+  }
+}
+
+@mixin scrollbar-track-piece {
+  &::-webkit-scrollbar-track-piece {
+    @content;
+  }
+}
+
+//==========HYPHENATION WORDS==========//
+
+@mixin hyphens {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+//==========addition mixins==========//
+
+@mixin large_bg {
+  background-color: #524e4b;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+///////////////////////////////////////////////////////state (hover/active) mixin
+
+@mixin state {
+  &:hover,
+  &:active {
+    @content;
+  }
+}
+
+///////////////////////////////////////////////////////Sizes mixin
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////placeholder
+
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+
+  &[placeholder] {
+    text-overflow: ellipsis; //if the word does not fit - three points in the end
+  }
+
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      text-overflow: ellipsis; //if the word does not fit - three points in the end
+      font: inherit;
+      color: inherit;
+      transition: color 0.2s;
+      @content;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////palceholder:focus
+
+@mixin placeholder--focus {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+
+  @each $placeholder in $placeholders {
+    &:focus:#{$placeholder}-placeholder {
+      color: transparent; //hideplaceholder if :focus state
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////MEDIA
+
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px,
+);
+
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' +  'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////MEDIA CUSTOM
+@mixin media-custom($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////RETINA 2x
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    opacity: 0;
+    background-color: currentColor;
+    transform: translateY(-15px);
+    transition: all 0.2s linear;
+  }
+
+  @include state {
+    &::after {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+////////////////////////////////////////////// reset list
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////// Triangle
+/// Returns the opposite direction of each direction in a list
+/// @author Hugo Giraudel
+/// @param {List} $directions - List of initial directions
+/// @return {List} - List of opposite directions
+@function opposite-direction($directions) {
+  $opposite-directions: ();
+  $direction-map: (
+    "top": "bottom",
+    "right": "left",
+    "bottom": "top",
+    "left": "right",
+  );
+
+  @each $direction in $directions {
+    $direction: to-lower-case($direction);
+
+    @if map-has-key($direction-map, $direction) {
+      $opposite-directions: append(
+        $opposite-directions,
+        unquote(map-get($direction-map, $direction))
+      );
+    } @else {
+      @warn 'No opposite direction can be found for `#{$direction}`. Direction omitted.';
+    }
+  }
+
+  @return $opposite-directions;
+}
+
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color - Triangle color
+/// @param {width} $width - Triangle width
+/// @param {Height} $height - Triangle height
+
+@mixin triangle(
+  $direction,
+  $width: 1em,
+  $height: $width,
+  $color: currentColor
+) {
+  @if not index(top right bottom left, $direction) {
+    @error 'Direction must be either `top`, `right`, `bottom` or `left`.';
+  }
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: 2;
+  border-#{opposite-direction($direction)}: $height solid $color;
+  $transparent-borders: $width/2 solid transparent;
+  @if $direction == top or $direction == bottom {
+    border-left: $transparent-borders;
+    border-right: $transparent-borders;
+  } @else if $direction == right or $direction == left {
+    border-bottom: $transparent-borders;
+    border-top: $transparent-borders;
+  }
+}
+
+// mixins
+@mixin max($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: #{map-get($breakpoints, $size) - 1}px) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$size}px) {
+      @content;
+    }
+  }
+}
+
+@mixin min($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: #{map-get($breakpoints, $size)}px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$size}px) {
+      @content;
+    }
+  }
+}
+
+@mixin between($from, $to) {
+  @if map-has-key($breakpoints, $from) {
+    @media (min-width: #{map-get($breakpoints, $from)}px) and (max-width: #{map-get($breakpoints, $to)}px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$from}px) and (max-width: #{$to}px) {
+      @content;
+    }
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}

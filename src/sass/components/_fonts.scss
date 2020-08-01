@@ -1,0 +1,58 @@
+// $family - string - font-family
+// $folder - font folder == font-family
+// $font - font file name
+// $weight - font-weight
+// $style - font-style
+@mixin font($family, $folder, $font, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: local($family),
+         url('../fonts/#{$folder}/#{$font}/#{$font}.woff2') format('woff2'),
+         url('../fonts/#{$folder}/#{$font}/#{$font}.ttf')  format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */
+         url('../fonts/#{$folder}/#{$font}/#{$font}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+//CALIBRI
+// LIGHT
+@include font('Calibri', Calibri, CalibriLight, 300);
+  // REGULAR
+@include font('Calibri', Calibri, CalibriRegular, 400);
+  // BOLD
+@include font('Calibri', Calibri, CalibriBold, 900);
+  // ITALIC
+@include font('Calibri', Calibri, CalibriItalic, 400, italic);
+
+//UNIVERS
+  // MEDIUM
+@include font('Univers', Univers, UniversMedium, 500);
+  // BOLD
+@include font('Univers', Univers, UniversBold, 900);
+
+// {
+// 	'extrathin': 50,
+// 	'hairline': 50,
+// 	'ultrathin': 50,
+// 	'thin': 100,
+// 	'extralight': 200,
+// 	'ultralight': 200,
+// 	'light': 300,
+// 	'book': 400,
+// 	'normal': 400,
+// 	'plain': 400,
+// 	'regular': 400,
+// 	'medium': 500,
+// 	'demibold': 600,
+// 	'semibold': 600,
+// 	'bold': 700,
+// 	'extrabold': 800,
+// 	'heavy': 800,
+// 	'ultrabold': 800,
+// 	'black': 900,
+// 	'extrablack': 950,
+// 	'fat': 950,
+// 	'poster': 950,
+// 	'ultrablack': 950
+// }

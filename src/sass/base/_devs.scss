@@ -1,0 +1,56 @@
+///scrollTop
+
+// .scrollTop{
+// 	color: #fff;
+// 	font-size: 30px;
+// 	position: fixed;
+// 	bottom: 3.7vh;
+// 	right: 3.7vw;
+// 	line-height: 35px;
+// 	padding: 5px 10px;
+// 	@include size(53px);
+// 	border-radius: 100%;
+// 	background-color: transparent;
+// 	color: #e1e1e1;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	border: 2px solid #e1e1e1;
+// 	transition: all 0.5s;
+// 	// opacity: 0;
+// 	// visibility: hidden;
+// 	z-index: 100;
+//
+// 	&:before{ content:'↑' }
+//
+//
+// 	&:hover,
+// 	&:active{
+// 		// opacity: 1;
+// 		color: $theme_color;
+// 		border-color: $theme_color;
+// 	}
+// }
+.scroll{
+	color: #fff;
+	font-size: 20px;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	padding: 5px 10px;
+	background-color: lightblue;
+	text-decoration: none;
+	border-radius: 3px;
+	transition: all 0.5s;
+	opacity: 0;
+	visibility: hidden;
+
+	&--visible{
+		opacity: 0.8;
+		visibility: visible;
+
+		&:hover,
+		&:active{
+			opacity: 1;
+		}
+	}
+}
