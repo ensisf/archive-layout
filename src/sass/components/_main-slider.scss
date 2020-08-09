@@ -123,18 +123,6 @@
       left: calc(#{(600/1700 * 100%)} + #{$gutter/4 + px});
     }
   }
-
-  &__nav {
-    // justify-content: center;
-    // flex-direction: column;
-
-    // @include min($bp) {
-    //   width: (400/1700 * 100%);
-    //   justify-content: flex-end;
-    //   flex-direction: row;
-    //   padding-right: 80px;
-    // }
-  }
   &__nav-counts {
     align-self: center;
     padding: 5px 40px;

@@ -38,6 +38,7 @@ jQuery(document).ready(function ($) {
     prevArrow: ".js-main-slider-prev",
     nextArrow: ".js-main-slider-next",
     fade: true,
+    autoplay: true,
   });
 
   //globals

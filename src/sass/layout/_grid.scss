@@ -4,6 +4,7 @@
   max-width: 100%;
   width: $container-width + $gutter + px;
   padding-left: $gutter/2 + px;
+  position: relative;
   padding-right: $gutter/2 + px;
 }
 

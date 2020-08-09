@@ -1,0 +1,31 @@
+.soc {
+  text-align: center;
+  @include min($container-width + $gutter) {
+    right: calc((100vw - 1700px) / 2 - 33px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    &__links {
+      position: absolute;
+      display: flex;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
