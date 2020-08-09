@@ -1,0 +1,47 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-eye {
+    width: 30px;
+    height: 19px;
+    background-position: -5px -5px;
+}
+
+.sprite-global {
+    width: 12px;
+    height: 12px;
+    background-position: -45px -5px;
+}
+
+.sprite-mail {
+    width: 12px;
+    height: 10px;
+    background-position: -67px -5px;
+}
+
+.sprite-marker {
+    width: 11px;
+    height: 13px;
+    background-position: -67px -25px;
+}
+
+.sprite-phone {
+    width: 13px;
+    height: 13px;
+    background-position: -5px -48px;
+}
+
+.sprite-wave-blue {
+    width: 66px;
+    height: 16px;
+    background-position: -89px -5px;
+}
+
+.sprite-wave-white {
+    width: 66px;
+    height: 16px;
+    background-position: -88px -31px;
+}
