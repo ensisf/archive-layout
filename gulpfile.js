@@ -22,14 +22,11 @@ var gulp = require("gulp"),
   plumber = require("gulp-plumber"),
   reload = browserSync.reload,
   babel = require("gulp-babel"),
-  stylelint = require("stylelint"),
   postcss = require("gulp-postcss"),
   reporter = require("postcss-reporter"),
   syntax_scss = require("postcss-scss"),
   realFavicon = require("gulp-real-favicon"),
-  fs = require("fs"),
-  // Stylelint config rules
-  stylelintConfig = require("./stylelint.config.js");
+  fs = require("fs");
 
 var path = {
   build: {
@@ -144,7 +141,6 @@ gulp.task("style:build", function () {
 
 gulp.task("scss-lint", function () {
   var processors = [
-    stylelint(stylelintConfig),
     reporter({
       clearMessages: true,
       throwError: true,

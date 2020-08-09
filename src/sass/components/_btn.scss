@@ -1,4 +1,4 @@
-.btn{
+.btn {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -10,7 +10,30 @@
   background: none;
   border: none;
 
-  &--menu{
+  &--bordered {
+    border: 1px solid #656f7b;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 17px 30px;
+    transition: 0.2s;
+
+    &::after {
+      content: "";
+      border-bottom: 1px solid currentColor;
+      width: 45px;
+      display: flex;
+      margin-left: 30px;
+    }
+
+    &:hover {
+      border-color: #fff;
+    }
+  }
+
+  &--menu {
     $btn-height: 28;
     $btn-width: 38;
     $l-height: 4;
@@ -20,7 +43,7 @@
     background-color: transparent;
     padding: 0;
 
-    .lines{
+    .lines {
       position: absolute;
       left: 0;
       width: 100%;
@@ -31,10 +54,10 @@
     }
 
     &::after,
-    &::before{
+    &::before {
       position: absolute;
       left: 0;
-      content: '';
+      content: "";
       background-color: currentColor;
       height: em($l-height);
       width: 100%;
@@ -43,36 +66,34 @@
       transition: all 0.3s;
     }
 
-    &::after{
+    &::after {
       bottom: 0;
     }
 
-    &::before{
+    &::before {
       top: 0;
     }
 
-    &:hover{
-
-      &::after{
+    &:hover {
+      &::after {
         transform: translateY(-2px);
       }
 
-      &::before{
+      &::before {
         transform: translateY(2px);
       }
     }
 
-    &.opened{
-
-      .lines{
+    &.opened {
+      .lines {
         transform: scale(0);
       }
 
-      &::after{
+      &::after {
         transform: translateY(em(-($btn-height/2 - $l-height/2))) rotate(45deg);
       }
 
-      &::before{
+      &::before {
         transform: translateY(em($btn-height/2 - $l-height/2)) rotate(-45deg);
       }
     }
