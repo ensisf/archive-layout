@@ -1,0 +1,11 @@
+.person {
+  &__content {
+    @include min("sm") {
+      display: flex;
+    }
+  }
+  &__img {
+  }
+  &__content-txt {
+  }
+}

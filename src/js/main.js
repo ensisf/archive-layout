@@ -10,7 +10,7 @@
 = vendor/jquery.smoothscroll.js
 = vendor/jquery.sticky.js
 = vendor/parallax.min.js
-= vendor/wow.min.js
+
 */
 
 jQuery(document).ready(function ($) {
@@ -132,3 +132,5 @@ jQuery(document).ready(function ($) {
   //     }
   // });
 });
+
+//= devs/nav-widget.js

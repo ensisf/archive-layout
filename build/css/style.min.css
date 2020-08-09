@@ -574,7 +574,7 @@ textarea {
   border: none;
   white-space: nowrap; }
   .btn--bordered {
-    border: 1px solid #656f7b;
+    border: 2px solid #656f7b;
     text-transform: uppercase;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;

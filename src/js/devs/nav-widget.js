@@ -1,17 +1,18 @@
 //source http://glivera-team.github.io/javascript/2016/04/06/js-functions.html
-pageWidget(['index', 'blog', 'about', 'contacts', 'single', 'some']);
+pageWidget(["index", "people", "critics", "archive-theatre", "archive-plays"]);
 function pageWidget(pages) {
-  let widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
+  let widgetWrap = $(
+    '<div class="widget_wrap"><ul class="widget_list"></ul></div>'
+  );
   widgetWrap.prependTo("body");
 
   for (let i = 0; i < pages.length; i++) {
     $(`<li class="widget_item">
       <a class="widget_link" href="${pages[i]}.html">${pages[i]}</a>
-    </li>`).appendTo('.widget_list');
+    </li>`).appendTo(".widget_list");
   }
 
-  let widgetStilization =
-        $(`<style>
+  let widgetStilization = $(`<style>
           body {
             position:relative
           } 
