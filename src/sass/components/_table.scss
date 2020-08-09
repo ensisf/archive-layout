@@ -1,0 +1,57 @@
+.tbl-wrap {
+  width: 100%;
+  overflow: auto;
+}
+
+.tbl {
+  min-width: 1200px;
+  table-layout: fixed;
+  font-weight: 500;
+  font-size: 24px;
+  width: 100%;
+
+  color: $theme-color;
+
+  a {
+    border-bottom: 1px dotted currentColor;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  td,
+  th {
+    border: 2px solid #d2d4d6;
+    padding: 15px;
+
+    @include min("lg") {
+      padding: 27px 40px;
+    }
+
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  tr {
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  thead {
+    th {
+      border-top: none;
+      text-align: left;
+    }
+  }
+}

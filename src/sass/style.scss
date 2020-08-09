@@ -17,6 +17,7 @@
 @import "components/_main-slider.scss";
 @import "components/_soc";
 @import "components/_abc";
+@import "components/_table.scss";
 
 //==========LAYOUT==========//
 @import "layout/_grid";
@@ -28,13 +29,13 @@
 // @import 'layout/_sidebar';
 // @import 'layout/_titles';
 @import "layout/_forms";
-// @import 'layout/_breadcrumbs';
-// @import 'layout/_pagination';
+@import "layout/_breadcrumbs";
+@import "layout/_pagination";
 // @import 'layout/_sliders';
 
 //==========PAGES==========//
 @import "pages/_index";
-@import "pages/_about";
+@import "pages/_archive";
 // @import 'pages/_contacts';
 // @import 'pages/_blog';
 // @import 'pages/_single';

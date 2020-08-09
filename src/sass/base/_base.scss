@@ -108,6 +108,22 @@ textarea {
   color: $theme-color;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-white {
+  background: #f2f3f4;
 }

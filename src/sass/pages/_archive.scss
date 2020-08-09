@@ -1,0 +1,27 @@
+.archive {
+  &__txt-img {
+    margin-right: 45px;
+  }
+
+  &__txt {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px;
+    max-width: 1200px;
+    @include max("sm") {
+      flex-direction: column;
+    }
+
+    @include max("xl") {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__abc {
+    transform: translateY(-50%);
+  }
+
+  &__cntnt {
+    padding-bottom: 65px;
+  }
+}
