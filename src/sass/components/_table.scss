@@ -12,7 +12,7 @@
 
   color: $theme-color;
 
-  a {
+  a:not(.btn) {
     border-bottom: 1px dotted currentColor;
 
     &:hover {

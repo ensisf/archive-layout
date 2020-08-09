@@ -9,6 +9,7 @@
   cursor: pointer;
   background: none;
   border: none;
+  white-space: nowrap;
 
   &--bordered {
     border: 1px solid #656f7b;
@@ -19,6 +20,7 @@
     font-size: 18px;
     padding: 17px 30px;
     transition: 0.2s;
+    font-weight: 500;
 
     &::after {
       content: "";
@@ -30,6 +32,31 @@
 
     &:hover {
       border-color: #fff;
+    }
+  }
+
+  &--bg {
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 17px 30px;
+    transition: 0.2s;
+    background-color: #e4e6e8;
+    color: $theme-color;
+    font-weight: 500;
+
+    &::after {
+      content: "";
+      border-bottom: 1px solid currentColor;
+      width: 45px;
+      display: flex;
+      margin-left: 30px;
+    }
+
+    &:hover {
+      background: $yellow;
     }
   }
 
