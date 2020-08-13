@@ -10,6 +10,7 @@
   background: none;
   border: none;
   white-space: nowrap;
+  text-align: center;
 
   &--bordered {
     border: 2px solid #656f7b;
@@ -46,6 +47,7 @@
     background-color: #e4e6e8;
     color: $theme-color;
     font-weight: 500;
+    justify-content: center;
 
     &::after {
       content: "";
