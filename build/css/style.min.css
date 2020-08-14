@@ -702,15 +702,16 @@ textarea {
     color: #1a283a;
     font-weight: bold;
     font-size: 28px;
+    margin-top: 0;
     margin-bottom: 20px; }
     @media (min-width: 992px) {
       .new-card__ttl {
         font-size: 36px; } }
   .new-card__box {
-    padding: 0 20px 20px; }
+    padding: 36px 20px 20px; }
     @media (min-width: 992px) {
       .new-card__box {
-        padding: 0 50px 45px; } }
+        padding: 36px 50px 45px; } }
   .new-card__footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1692,5 +1693,59 @@ input[type='submit'] {
     -webkit-transform: translateY(-3px);
         -ms-transform: translateY(-3px);
             transform: translateY(-3px); }
+
+.blog__decor::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/images/last-news.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  pointer-events: none;
+  left: 45%;
+  top: -150px;
+  width: 350px;
+  height: 350px;
+  z-index: 1; }
+
+.blog__decor::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/images/last-news.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  pointer-events: none;
+  /* left: 62%; */
+  bottom: -150px;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: rotate(168deg);
+      -ms-transform: rotate(168deg);
+          transform: rotate(168deg);
+  z-index: 1;
+  right: 3%; }
+
+.blog__box {
+  padding-bottom: 85px;
+  background-color: #f8f9f9;
+  position: relative;
+  background-image: url(../img/images/news-bg-1.png), url(../img/images/news-bg-2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 2% calc(100% - 275px), 100% 600px; }
+  .blog__box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 338px;
+    background-color: #19283a; }
+
+.blog .col {
+  margin-bottom: 18px; }
+
+.blog .new-card {
+  border: 1px solid #afb4ba; }
 
 /*# sourceMappingURL=../maps/style.min.css.map */

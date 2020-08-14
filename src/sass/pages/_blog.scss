@@ -1,3 +1,64 @@
 .blog{
 
+  &__decor {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/images/last-news.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      pointer-events: none;
+      left: 45%;
+      top: -150px;
+      width: 350px;
+      height: 350px;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/images/last-news.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      pointer-events: none;
+      /* left: 62%; */
+      bottom: -150px;
+      width: 350px;
+      height: 350px;
+      transform: rotate(168deg);
+      z-index: 1;
+      right: 3%;
+    }
+  }
+  
+  &__box {
+    padding-bottom: 85px;
+    background-color: #f8f9f9;
+
+    position: relative;      
+    background-image: url(../img/images/news-bg-1.png), url(../img/images/news-bg-2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 2% calc(100% - 275px), 100% 600px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 338px;
+      background-color: $theme-color;
+    }
+  }
+
+  .col {
+    margin-bottom: $gutter +px;
+  }
+
+  .new-card {
+    border: 1px solid #afb4ba;
+  }
 }
+ 
