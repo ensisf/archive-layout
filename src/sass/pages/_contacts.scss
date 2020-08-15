@@ -47,12 +47,32 @@
 
 
   .container {
+    padding-top: 30px;
+    padding-bottom: 70px;
     @include min('sm') {
       display: flex;
       flex-wrap: wrap;
     }
     @include min('md') {
       flex-wrap: nowrap;
+    }
+
+    &::before {
+     @include min('sm') {
+      content: "";
+      position: absolute;
+      background-image: url(../img/images/last-news.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      pointer-events: none;
+      left: 40%;
+      top: -150px;
+      width: 350px;
+      height: 350px;
+      z-index: 1;
+      transform: rotate(-52deg);
+     }
     }
   }
 
@@ -61,6 +81,10 @@
       font-size: 30px;
       padding-bottom: 24px;
     }
+  }
+
+  .blog__box::before {
+    height: 240px;
   }
 }
 
@@ -89,4 +113,6 @@
       color: $yellow;
     }
   }
+
+  
 }
