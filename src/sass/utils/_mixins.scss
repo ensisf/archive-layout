@@ -165,6 +165,8 @@
       font: inherit;
       color: inherit;
       transition: color 0.2s;
+      font-size: 18px;
+      color: #828284;
       @content;
     }
   }

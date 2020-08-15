@@ -1278,20 +1278,26 @@ textarea {
 
 textarea {
   resize: vertical;
+  color: #828284;
   min-height: 200px; }
 
 .form-control {
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid #d2d4d6;
   background-image: none;
   background-color: #fff;
+  color: #828284;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
   border-radius: 0;
+  font-size: 18px;
+  color: #828284;
   font: inherit;
-  color: inherit;
   -webkit-transition: border-color ease-in-out 0.2s;
   -o-transition: border-color ease-in-out 0.2s;
-  transition: border-color ease-in-out 0.2s; }
+  transition: border-color ease-in-out 0.2s;
+  padding: 10px 19px; }
   .form-control:focus {
     border-color: #19283a; }
   .form-control[placeholder] {
@@ -1303,28 +1309,36 @@ textarea {
     color: inherit;
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
-    transition: color 0.2s; }
+    transition: color 0.2s;
+    font-size: 18px;
+    color: #828284; }
   .form-control::-moz-placeholder {
     text-overflow: ellipsis;
     font: inherit;
     color: inherit;
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
-    transition: color 0.2s; }
+    transition: color 0.2s;
+    font-size: 18px;
+    color: #828284; }
   .form-control:-moz-placeholder {
     text-overflow: ellipsis;
     font: inherit;
     color: inherit;
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
-    transition: color 0.2s; }
+    transition: color 0.2s;
+    font-size: 18px;
+    color: #828284; }
   .form-control:-ms-input-placeholder {
     text-overflow: ellipsis;
     font: inherit;
     color: inherit;
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
-    transition: color 0.2s; }
+    transition: color 0.2s;
+    font-size: 18px;
+    color: #828284; }
   .form-control:focus::-webkit-input-placeholder {
     color: transparent; }
   .form-control:focus::-moz-placeholder {
@@ -1357,6 +1371,22 @@ input[type='submit'] {
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s; }
+
+.form-item {
+  position: relative;
+  margin-bottom: 30px; }
+  .form-item__lbl {
+    color: #19283a;
+    font-size: 18px;
+    line-height: 1;
+    white-space: nowrap;
+    font-weight: 500;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 10px; }
 
 .breadcrumbs {
   font-size: 18px;
@@ -1694,6 +1724,87 @@ input[type='submit'] {
         -ms-transform: translateY(-3px);
             transform: translateY(-3px); }
 
+.contacts__form {
+  background-color: #fff;
+  padding: 60px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px; }
+  @media (min-width: 768px) {
+    .contacts__form {
+      padding: 60px;
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .contacts__form {
+      margin-right: 30px;
+      width: 28.82353%;
+      min-width: 380px; } }
+  .contacts__form .btn {
+    width: 100%; }
+
+.contacts__details {
+  background-color: #fff;
+  color: #19283a;
+  padding: 30px; }
+  @media (min-width: 768px) {
+    .contacts__details {
+      padding: 60px;
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .contacts__details {
+      width: 26.47059%;
+      min-width: 380px; } }
+
+.contacts__map {
+  min-height: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .contacts__map iframe {
+    min-height: 300px;
+    width: 100%; }
+
+@media (min-width: 768px) {
+  .contacts .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+@media (min-width: 992px) {
+  .contacts .container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; } }
+
+@media (min-width: 768px) {
+  .contacts .section__ttl {
+    font-size: 30px;
+    padding-bottom: 24px; } }
+
+.c-details {
+  position: relative;
+  padding-left: 20px; }
+  .c-details:not(:last-child) {
+    margin-bottom: 17px; }
+  .c-details i {
+    position: absolute;
+    top: 12px;
+    left: 0; }
+  .c-details__lbl {
+    margin-bottom: 5px; }
+  .c-details__val {
+    font-weight: 700;
+    display: block;
+    font-size: 24px;
+    line-height: 1.4; }
+  .c-details a:hover {
+    color: #ecc853; }
+
 .blog__decor::after {
   content: "";
   position: absolute;
@@ -1747,5 +1858,71 @@ input[type='submit'] {
 
 .blog .new-card {
   border: 1px solid #afb4ba; }
+
+.post {
+  overflow: hidden; }
+  @media (min-width: 992px) {
+    .post__grid {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .post__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    @media (min-width: 992px) {
+      .post__content {
+        padding-right: 4.11765%; } }
+  .post__content-img {
+    margin-bottom: 6.49351%;
+    position: relative; }
+    .post__content-img::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/images/last-news.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      pointer-events: none;
+      left: 70%;
+      top: -150px;
+      width: 350px;
+      height: 350px;
+      z-index: 1; }
+    .post__content-img img {
+      display: block;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      min-height: 400px; }
+  .post__content-box {
+    color: #19283a;
+    font-weight: 500;
+    padding-bottom: 45px; }
+    @media (min-width: 992px) {
+      .post__content-box .ttl-line {
+        padding-bottom: 15px; } }
+  @media (min-width: 992px) {
+    .post__last {
+      width: 27.94118%;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      min-width: 400px;
+      -webkit-transform: translateY(-90px);
+          -ms-transform: translateY(-90px);
+              transform: translateY(-90px); }
+      .post__last .section__ttl {
+        padding-bottom: 25px; } }
+  .post .blog__box {
+    background-position: 99% 96%, 100% 600px; }
+  @media (min-width: 992px) {
+    .post .person__main-ttl {
+      margin-bottom: 37px;
+      max-width: 72.05882%; } }
+  .post .blog__box::before {
+    height: 354px;
+    background-image: url(../img/images/op-bg.png);
+    background-repeat: no-repeat;
+    background-position: 97% 0%; }
 
 /*# sourceMappingURL=../maps/style.min.css.map */

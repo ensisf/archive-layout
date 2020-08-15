@@ -1,19 +1,25 @@
 //only vertical resize for textareas
 textarea {
-    resize: vertical;
-    min-height: 200px;
+  resize: vertical;
+  color: #828284;;
+  min-height: 200px;
 }
+
 
 .form-control {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, .15);
+    border: 1px solid #d2d4d6;
     background-image: none;
     background-color: #fff;
+    color: #828284;;
+  box-sizing: border-box;
     outline: none;
     border-radius: 0;
+    font-size: 18px;
+    color: #828284;
     font: inherit;
-    color: inherit;
     transition: border-color ease-in-out 0.2s;
+    padding: 10px 19px;
 
     &:focus{
       border-color: $theme-color;
@@ -44,5 +50,25 @@ input[type='submit']{
 
   &:hover{
 
+  }
+}
+
+
+.form-item {
+  position: relative;
+  margin-bottom: 30px;
+
+  &__lbl {
+    color: $theme-color;
+    font-size: 18px;
+    line-height: 1;
+    white-space: nowrap;
+    font-weight: 500;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 0 10px ;
   }
 }
