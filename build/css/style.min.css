@@ -1484,6 +1484,85 @@ input[type='submit'] {
   .pagination__item.isActive a, .pagination__item:hover a {
     background-color: #ecc853; }
 
+.sliders img {
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.sliders__main {
+  margin-bottom: 40px; }
+  .sliders__main .slick-initialized .slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .sliders__main .slick-slide {
+    height: 450px; }
+    @media (min-width: 768px) {
+      .sliders__main .slick-slide {
+        height: 540px !important; } }
+    @media (min-width: 992px) {
+      .sliders__main .slick-slide {
+        height: 740px !important; } }
+    @media (min-width: 1200px) {
+      .sliders__main .slick-slide {
+        height: 940px !important; } }
+
+.sliders__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .sliders__nav .slick-slide {
+    height: 135px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 11px; }
+    .sliders__nav .slick-slide:not(.slick-current) {
+      opacity: 0.6; }
+
+.sliders__nav-inner {
+  max-width: 100%;
+  max-width: calc(100% - 102px); }
+  @media (min-width: 500px) {
+    .sliders__nav-inner {
+      max-width: calc(100% - 174px); } }
+
+.sliders__btn {
+  color: #19283a;
+  width: 100%;
+  background: none;
+  border: 2px solid #b0b5bb;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: 40px; }
+  .sliders__btn:first-child {
+    margin-right: 11px; }
+  .sliders__btn:last-child {
+    margin-left: 11px; }
+  @media (min-width: 500px) {
+    .sliders__btn {
+      padding: 10px;
+      width: 67px; }
+      .sliders__btn:first-child {
+        margin-right: 20px; }
+      .sliders__btn:last-child {
+        margin-left: 20px; } }
+  .sliders__btn:hover {
+    color: #ecc853;
+    border-color: #ecc853; }
+  .sliders__btn svg {
+    width: 15px;
+    height: 22px;
+    fill: currentColor; }
+
+.sliders .slick-slide {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
 .section {
   padding: 50px 0; }
   @media (min-width: 1500px) {

@@ -14,7 +14,7 @@
 */
 
 jQuery(document).ready(function ($) {
-  // On before slide change
+  // Sliders
   $(".js-main-slick").on("afterChange", function (
     event,
     slick,
@@ -40,6 +40,60 @@ jQuery(document).ready(function ($) {
     fade: true,
     autoplay: true,
   });
+  
+  $(".js-main-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.js-nav-slider'
+  });
+  
+  $(".js-nav-slider").slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    asNavFor: '.js-main-slider',
+    focusOnSelect: true,
+    prevArrow: ".js-sliders-prev",
+    nextArrow: ".js-sliders-next",
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
+  });
+  // xs: 576,
+  // sm: 768,
+  // md: 992,
+  // lg: 1200,
+  // Sliders
 
   //globals
   let $window = $(window),
