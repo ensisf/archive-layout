@@ -1,5 +1,5 @@
 //source http://glivera-team.github.io/javascript/2016/04/06/js-functions.html
-pageWidget(["index", "people", "critics", "archive-theatre", "archive-plays", "person", "blog", "single", "contacts", "play"]);
+pageWidget(["index", "people", "critics", "archive-theatre", "archive-plays", "person", "blog", "single", "contacts", "play", "theatre"]);
 function pageWidget(pages) {
   let widgetWrap = $(
     '<div class="widget_wrap"><ul class="widget_list"></ul></div>'

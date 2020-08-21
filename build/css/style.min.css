@@ -2318,4 +2318,85 @@ input[type='submit'] {
             -ms-transform: translateY(-90px);
                 transform: translateY(-90px); } }
 
+.theatre__gallery {
+  position: relative;
+  padding-top: 151px;
+  padding-bottom: 165px;
+  background-color: #f8f9f9; }
+  .theatre__gallery::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 134px;
+    height: 134px;
+    z-index: 10000;
+    -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+            filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+    top: -83px;
+    left: 5%;
+    -webkit-transform: rotate(-36deg) scaleX(-1);
+        -ms-transform: rotate(-36deg) scaleX(-1);
+            transform: rotate(-36deg) scaleX(-1); }
+  .theatre__gallery::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-blue.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 147px;
+    height: 147px;
+    top: 155px;
+    right: 3%; }
+  @media (min-width: 768px) {
+    .theatre__gallery .section__ttl {
+      font-size: 48px; } }
+  .theatre__gallery .sliders::before {
+    content: none; }
+  .theatre__gallery .container {
+    z-index: 3; }
+
+.theatre__more-info::before {
+  -webkit-transform: rotate(106deg) scale(-1);
+      -ms-transform: rotate(106deg) scale(-1);
+          transform: rotate(106deg) scale(-1);
+  top: -71px;
+  right: 10%;
+  bottom: auto; }
+
+.theatre__video {
+  position: relative; }
+  .theatre__video::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 134px;
+    height: 134px;
+    top: -59px;
+    left: 5%;
+    z-index: 10000;
+    -webkit-transform: rotate(6deg) scaleX(1);
+        -ms-transform: rotate(6deg) scaleX(1);
+            transform: rotate(6deg) scaleX(1);
+    -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+            filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33)); }
+  @media (min-width: 1200px) {
+    .theatre__video .player__btn {
+      width: 300px;
+      height: 300px; }
+    .theatre__video .player__ttl {
+      left: auto;
+      font-size: 36px;
+      line-height: 48px;
+      bottom: 60%;
+      max-width: 500px;
+      max-height: initial;
+      right: calc(50% + 150px); } }
+
 /*# sourceMappingURL=../maps/style.min.css.map */
