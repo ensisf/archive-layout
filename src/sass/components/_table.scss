@@ -20,6 +20,17 @@
     }
   }
 
+  th:empty {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  tr.no-top-border {
+    td {
+      border-top: none;
+    }
+  }
+
   td,
   th {
     border: 2px solid #d2d4d6;

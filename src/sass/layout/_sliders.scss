@@ -55,6 +55,10 @@
     border: 2px solid #b0b5bb;
     transition: 0.3s;
     width: 40px;
+    
+    &:focus{
+      outline: none 
+    }
 
     &:first-child{
       margin-right: 11px;

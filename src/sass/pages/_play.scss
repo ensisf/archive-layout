@@ -1,0 +1,255 @@
+.play {
+  .blog__box {
+    background-image: none;
+    overflow: hidden;
+    &::before {
+
+      @include min('sm') {
+        height: 470px;
+      }
+    }
+  }
+  .sliders {
+    position: relative;
+    &::before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      top: 15%;
+      left: -60px;
+      z-index: 10000;
+      transform: rotate(-50deg) scaleX(-1);
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+    }
+  }
+  &__photos {
+    background-color: #fff;
+  }
+  &__more-info {
+    background-color: #f8f9f9;
+    color: $theme-color;
+    padding-bottom: 134px;
+    padding-top: 153px;
+    position: relative;
+
+    &::before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 147px;
+      height: 147px;
+      bottom: -82px;
+      right: 3%;
+      z-index: 10000;
+      transform: rotate(180deg) scale(-1);
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+    }
+
+    .section__ttl {
+      @include min('sm') {
+        font-size: 48px;
+        padding-bottom: 12px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+  &__grid {
+    @include min('lg') {
+      display: flex;
+    }
+  }
+
+  &__content {
+    padding-top: 80px;
+    @include min('lg') {
+      width: (1700 - 590)/1700*100%;
+      padding-right: 80/1700*100%;
+
+      .tbl {
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__descr {
+    margin-bottom: 53px;
+    @include min('lg') {
+      padding: 70px;
+      .section__ttl {
+        font-size: 33px;
+      }
+
+      p {
+        font-size: 23px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+    }
+
+    position: relative;
+
+    &::before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      top: 46px;
+      right: -52px;
+      z-index: 10000;
+      transform: rotate(117deg) scaleX(-1);
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+    }
+  }
+
+  &__aside {
+    padding-top: 80px;
+    flex-shrink: 0;
+    @include min('lg') {
+      width: 590/1700*100%;
+      min-width: 400px;
+    }
+    .player {
+      + .player {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.posters {
+  padding-bottom: 155px;
+  overflow: hidden;
+  
+  .row {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 147px;
+      height: 147px;
+      bottom: 30px;
+      left: -75px;
+      z-index: 10000;
+      transform: rotate(121deg) scale(-1);
+    }
+
+    &::after {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-blue.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 147px;
+      height: 147px;
+      top: 30px;
+      right: -75px;
+      z-index: -1;
+      @include min('md') {
+        top: -50px;
+      }
+    }
+  }
+  .section__ttl  {
+    @include min('sm') {
+      font-size: 48px;
+    }
+    @include min('lg') {
+      padding-top: 25px;
+    }
+  }
+  &__more {
+    margin-top: 40px;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    height: 580px;
+    transition:0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 233px 0px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      .posters__overlay{
+        margin: 20px;
+        opacity: 1;
+      }
+    }
+}
+
+  &__overlay {
+    display: flex;
+    background: rgba($theme-color, 0.8);
+    transition:inherit;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 333;
+    // opacity: 0;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: auto;
+    
+    svg {
+      display: block;
+      position: absolute;
+      fill: currentColor;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      &:hover {
+        fill: $yellow;
+      }
+    }
+  }
+
+  &__img {
+    transition:inherit;
+    display:block;
+    height: 100%;
+    object-fit:cover;
+  }
+
+  .col {
+    position: relative;
+    z-index: 1;
+    @include min('lg') {
+      &:nth-child(even) {
+        transform: translateY(-90px)      }
+    }
+  }
+}

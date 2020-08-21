@@ -12,6 +12,10 @@
   white-space: nowrap;
   text-align: center;
 
+  &:focus {
+    outline: none;
+  }
+
   &--bordered {
     border: 2px solid #656f7b;
     text-transform: uppercase;

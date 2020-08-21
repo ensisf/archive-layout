@@ -1,17 +1,6 @@
-///////////////////////////////////////////////////VENDORS
 "use strict";
-/*
- = devs/map.js
-= vendor/sprite-svg.js
-= vendor/fotorama.js
-= vendor/jquery.magnific-popup.js
-= vendor/jquery.maskedinput.min.js
-= vendor/jquery.pickmeup.min.js
-= vendor/jquery.smoothscroll.js
-= vendor/jquery.sticky.js
-= vendor/parallax.min.js
 
-*/
+//= vendor/jquery.magnific-popup.js
 
 jQuery(document).ready(function ($) {
   // Sliders
@@ -33,22 +22,19 @@ jQuery(document).ready(function ($) {
     $(".js-main-slider-current-slide").text(1);
     $(".js-main-slider-all-slides").text(slick.slideCount);
   });
-
   $(".js-main-slick").slick({
     prevArrow: ".js-main-slider-prev",
     nextArrow: ".js-main-slider-next",
     fade: true,
     autoplay: true,
-  });
-  
+  });  
   $(".js-main-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
     asNavFor: '.js-nav-slider'
-  });
-  
+  }); 
   $(".js-nav-slider").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -89,11 +75,6 @@ jQuery(document).ready(function ($) {
       },
     ]
   });
-  // xs: 576,
-  // sm: 768,
-  // md: 992,
-  // lg: 1200,
-  // Sliders
 
   //globals
   let $window = $(window),
@@ -185,6 +166,34 @@ jQuery(document).ready(function ($) {
   //       }
   //     }
   // });
+
+  
+    $('.js-posters').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      // image: {
+      //   tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      //   titleSrc: function(item) {
+      //     return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+      //   }
+      // }
+    });
+
+
+  $doc.on('click', '.js-player-btn', function() {
+    $(this).parents('.js-player').find('.js-player-iframe').attr('src', $(this).data('iframe-src'))
+    $(this).parents('.js-player').find('.js-player-overlay').hide()
+
+    // console.log($(this).parents('.js-player').find('.js-player-iframe').setAttribute())
+    // 
+  })
 });
 
-//= devs/nav-widget.js
+
