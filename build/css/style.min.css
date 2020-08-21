@@ -1871,6 +1871,43 @@ input[type='submit'] {
         -ms-transform: translateY(-3px);
             transform: translateY(-3px); }
 
+.contacts__row {
+  padding-top: 30px;
+  padding-bottom: 70px;
+  position: relative; }
+  @media (min-width: 768px) {
+    .contacts__row .section__ttl {
+      font-size: 30px;
+      padding-bottom: 24px; } }
+  @media (min-width: 768px) {
+    .contacts__row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  @media (min-width: 992px) {
+    .contacts__row {
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; } }
+  @media (min-width: 768px) {
+    .contacts__row::before {
+      left: 40%;
+      top: -51px;
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      -webkit-transform: rotate(-31deg) scaleX(-1);
+          -ms-transform: rotate(-31deg) scaleX(-1);
+              transform: rotate(-31deg) scaleX(-1);
+      -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+              filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33)); } }
+
 .contacts__form {
   background-color: #fff;
   padding: 60px;
@@ -1914,43 +1951,6 @@ input[type='submit'] {
   .contacts__map iframe {
     min-height: 300px;
     width: 100%; }
-
-.contacts .container {
-  padding-top: 30px;
-  padding-bottom: 70px; }
-  @media (min-width: 768px) {
-    .contacts .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
-  @media (min-width: 992px) {
-    .contacts .container {
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; } }
-  @media (min-width: 768px) {
-    .contacts .container::before {
-      content: "";
-      position: absolute;
-      background-image: url(../img/images/last-news.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center center;
-      pointer-events: none;
-      left: 40%;
-      top: -150px;
-      width: 350px;
-      height: 350px;
-      z-index: 1;
-      -webkit-transform: rotate(-52deg);
-          -ms-transform: rotate(-52deg);
-              transform: rotate(-52deg); } }
-
-@media (min-width: 768px) {
-  .contacts .section__ttl {
-    font-size: 30px;
-    padding-bottom: 24px; } }
 
 .contacts .blog__box::before {
   height: 240px; }

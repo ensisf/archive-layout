@@ -1,4 +1,39 @@
 .contacts{
+  &__row {
+    padding-top: 30px;
+    padding-bottom: 70px;
+    position: relative;
+    .section__ttl {
+      @include min('sm') {
+        font-size: 30px;
+        padding-bottom: 24px;
+      }
+    }
+    @include min('sm') {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include min('md') {
+      flex-wrap: nowrap;
+    }
+
+    &::before {
+     @include min('sm') {
+      left: 40%;
+      top: -51px;
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      transform: rotate(-31deg) scaleX(-1);
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+     }
+    }
+  }
   &__form {
     background-color: #fff;
     padding: 60px;
@@ -46,42 +81,7 @@
   }
 
 
-  .container {
-    padding-top: 30px;
-    padding-bottom: 70px;
-    @include min('sm') {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    @include min('md') {
-      flex-wrap: nowrap;
-    }
-
-    &::before {
-     @include min('sm') {
-      content: "";
-      position: absolute;
-      background-image: url(../img/images/last-news.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center center;
-      pointer-events: none;
-      left: 40%;
-      top: -150px;
-      width: 350px;
-      height: 350px;
-      z-index: 1;
-      transform: rotate(-52deg);
-     }
-    }
-  }
-
-  .section__ttl {
-    @include min('sm') {
-      font-size: 30px;
-      padding-bottom: 24px;
-    }
-  }
+  
 
   .blog__box::before {
     height: 240px;

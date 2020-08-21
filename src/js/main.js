@@ -1,5 +1,6 @@
 "use strict";
 
+//= devs/nav-widget.js
 //= vendor/jquery.magnific-popup.js
 
 jQuery(document).ready(function ($) {
