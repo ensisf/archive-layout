@@ -146,30 +146,12 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
     $('body').toggleClass("menu-opened");
   });
-
+  
   $(".js-btn-search").on("click", function (e) {
     e.preventDefault();
     $('body').toggleClass("search-opened");
+    $('.js-search-input').focus()
   });
-
-  //modals
-  let modalLink = $(".modal-link");
-
-  //   modalLink.magnificPopup({
-  //     type: 'inline',
-  //     preloader: false,
-  //     closeBtnInside: true,
-  //     removalDelay: 200,
-  //     mainClass: 'fade-zoom',
-  //     callbacks: {
-  //       beforeOpen: function() {
-  //
-  //       },
-  //       afterClose: function() {
-  //
-  //       }
-  //     }
-  // });
 
   
     $('.js-posters').magnificPopup({
@@ -180,24 +162,24 @@ jQuery(document).ready(function ($) {
       gallery: {
         enabled: true,
         navigateByImgClick: true,
-        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        preload: [0,1] 
       },
-      // image: {
-      //   tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      //   titleSrc: function(item) {
-      //     return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-      //   }
-      // }
     });
 
 
   $doc.on('click', '.js-player-btn', function() {
     $(this).parents('.js-player').find('.js-player-iframe').attr('src', $(this).data('iframe-src'))
     $(this).parents('.js-player').find('.js-player-overlay').hide()
-
-    // console.log($(this).parents('.js-player').find('.js-player-iframe').setAttribute())
-    // 
   })
+
+
+  
+
+  $(".js-table-search-btn").on("click", function (e) {
+    e.preventDefault();
+    $(this).parents('.js-table-search').toggleClass("isOpened").find('.js-table-search-input').focus();
+  });
+
 });
 
 

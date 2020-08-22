@@ -1045,6 +1045,84 @@ textarea {
     border-top: none;
     text-align: left; }
 
+.table-search {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .table-search__btn {
+    background: none;
+    border: none;
+    padding: 0; }
+    .table-search__btn:hover {
+      color: #ecc853; }
+    .table-search__btn:focus {
+      outline: none; }
+    .table-search__btn--static {
+      margin-left: 10px; }
+      .table-search.isOpened .table-search__btn--static {
+        opacity: 0; }
+    .table-search__btn--left {
+      position: absolute;
+      left: 0;
+      top: 0; }
+    .table-search__btn--right {
+      position: absolute;
+      right: 0;
+      top: 0; }
+  .table-search.isOpened .table-search__txt {
+    opacity: 0; }
+  .table-search__box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none; }
+    .table-search.isOpened .table-search__box {
+      display: block; }
+  .table-search__search-input {
+    display: block;
+    font-size: 20px;
+    -webkit-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+    height: 35px;
+    border-bottom: 2px solid #19283a;
+    width: 100%;
+    padding: 0 22px; }
+    .table-search__search-input:focus {
+      outline: none; }
+  .table-search__results {
+    max-height: 300px;
+    overflow: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    right: 0;
+    z-index: 10;
+    padding: 10px 22px;
+    display: none; }
+    .table-search.isOpened .table-search__results {
+      display: block; }
+    .table-search__results:empty {
+      display: none; }
+  .table-search__result {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: none !important; }
+    .table-search__result:not(:last-child) {
+      border-bottom: 1px solid #d8d9db !important;
+      margin-bottom: 8px; }
+    .table-search__result:hover {
+      color: #ecc853; }
+
 .player {
   position: relative;
   overflow: hidden;
