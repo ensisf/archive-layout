@@ -54,6 +54,10 @@ $bp: 1700;
   align-items: center;
   max-width: 500px;
 
+  &:hover {
+    color: $yellow;
+  }
+
   @include max(1500) {
     span {
       display:none;

@@ -1,0 +1,58 @@
+.search-results {
+  position: relative;
+  &::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 147px;
+    height: 147px;
+    bottom: -82px;
+    right: 3%;
+    z-index: 10000;
+    transform: rotate(180deg) scale(-1);
+    filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+}
+.blog__box {
+  overflow: visible
+}
+
+&__container {
+  &::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 147px;
+    height: 147px;
+    top: -72px;
+    right: 8%;
+    z-index: 10000;
+    transform: rotate(180deg) scale(-1);
+    filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+}
+    &::after {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 147px;
+      height: 147px;
+      top: 172px;
+      left: 8%;
+      z-index: 10000;
+      transform: rotate(-180deg) scale(-1);
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+
+      @include min(1800) {
+        left: -70px;
+      }
+  }
+}
+}

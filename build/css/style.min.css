@@ -1324,6 +1324,8 @@ textarea {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 18px; }
+    .header__logo-1:hover {
+      color: #ecc853; }
     @media (max-width: 1500px) {
       .header__logo-1 span {
         display: none; } }
@@ -3120,5 +3122,64 @@ input[type='submit'] {
     @media (max-width: 1800px) {
       .about__box-tnch {
         display: none; } }
+
+.search-results {
+  position: relative; }
+  .search-results::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 147px;
+    height: 147px;
+    bottom: -82px;
+    right: 3%;
+    z-index: 10000;
+    -webkit-transform: rotate(180deg) scale(-1);
+        -ms-transform: rotate(180deg) scale(-1);
+            transform: rotate(180deg) scale(-1);
+    -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+            filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33)); }
+  .search-results .blog__box {
+    overflow: visible; }
+  .search-results__container::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 147px;
+    height: 147px;
+    top: -72px;
+    right: 8%;
+    z-index: 10000;
+    -webkit-transform: rotate(180deg) scale(-1);
+        -ms-transform: rotate(180deg) scale(-1);
+            transform: rotate(180deg) scale(-1);
+    -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+            filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33)); }
+  .search-results__container::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 147px;
+    height: 147px;
+    top: 172px;
+    left: 8%;
+    z-index: 10000;
+    -webkit-transform: rotate(-180deg) scale(-1);
+        -ms-transform: rotate(-180deg) scale(-1);
+            transform: rotate(-180deg) scale(-1);
+    -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+            filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33)); }
+    @media (min-width: 1800px) {
+      .search-results__container::after {
+        left: -70px; } }
 
 /*# sourceMappingURL=../maps/style.min.css.map */
