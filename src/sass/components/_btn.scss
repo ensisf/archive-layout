@@ -117,7 +117,7 @@
       }
     }
 
-    &.opened {
+    .menu-opened & {
       .lines {
         transform: scale(0);
       }

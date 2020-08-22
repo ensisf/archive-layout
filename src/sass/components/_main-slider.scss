@@ -56,6 +56,9 @@
     padding-bottom: 15px;
     @include min($bp) {
       padding-left: 15px;
+      padding-top: 70px;
+    }
+    @include min(1500) {
       padding-top: 180px;
     }
 

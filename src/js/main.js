@@ -141,12 +141,15 @@ jQuery(document).ready(function ($) {
     );
   }
 
-  let btnToggleNav = $(".toggle-nav");
 
-  btnToggleNav.on("click", function (e) {
+  $(".js-toggle-nav").on("click", function (e) {
     e.preventDefault();
-    $(this).toggleClass("opened");
-    $($(this).data("href")).toggleClass("closed");
+    $('body').toggleClass("menu-opened");
+  });
+
+  $(".js-btn-search").on("click", function (e) {
+    e.preventDefault();
+    $('body').toggleClass("search-opened");
   });
 
   //modals

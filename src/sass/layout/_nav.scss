@@ -1,10 +1,44 @@
 .nav{
+  display: flex;
+  position: relative;
+  z-index: 12;
+  justify-content: space-between;
+  white-space: nowrap;
 
-}
+  .btn {
+    position: absolute;
+    top: 53px;
+    right: 20px;
 
-.nav__list{
+    @include min('md') {
+      display:none;
+    }
+  }
 
-  a{
+  a {
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 10px;
 
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 15px;
+      background-color: #3b4857;
+      transition: 0.3s;opacity: 0;
+    }
+
+    &:hover,
+    &.isCurrent {
+      &::after {
+        opacity: 1;
+      }
+    }
   }
 }

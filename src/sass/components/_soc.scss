@@ -1,3 +1,6 @@
+.index-top {
+  position: relative;
+}
 .soc {
   text-align: center;
   @include min($container-width + $gutter) {

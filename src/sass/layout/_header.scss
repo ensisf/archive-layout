@@ -1,3 +1,277 @@
+$bp: 1700;
+
 .header {
   border-bottom: 1px solid #475361;
+  display: flex;
+  position: relative;
+  height:130px;
+
+  &__mobile-nav {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    
+
+    .nav {
+      transition: 0.2s;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @include min('md') {
+      display:none;
+    }
+
+    .menu-opened & {
+      .nav {
+
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .nav {
+      position: fixed;
+      background-color: $theme-color;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      justify-content: center;
+      align-items: center;
+      z-index: 5000;
+
+      a {margin-bottom: 15px;}
+    }
+  }
+
+  &__logo-1 {
+  display: flex;
+  justify-content:center;
+  padding: 20px;
+  align-items: center;
+  max-width: 500px;
+
+  @include max(1500) {
+    span {
+      display:none;
+    }
+  }
+  
+  @include min($bp) {
+    width: 500 / 1920 * 100%;
+  }
+    img {
+      
+      @include min(1500) {
+        margin-right: 15px;
+      }
+    }
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &__logo-2 {
+    
+    border-left: 1px solid #475361;
+    border-right: 1px solid #475361;
+    display: flex;
+    padding: 20px;
+    @include min(1500) {
+      width: 210px;
+    }
+    img {
+      margin: auto;
+    }
+
+    @include max(1100) {
+      display:none;
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+
+    @include max('md') {
+      display:none;
+    }
+  }
+
+  &__search-btn {
+    
+    margin-left: auto;
+
+    @include min('md') {
+      margin-right: 15px;
+    }
+    @include min(1700) {
+      margin-right: 50px;
+    }
+  }
+  &__search-btn,
+  &__close-search-btn,
+  &__search-btn-inner {
+    background: none;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__close-search-btn {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+  &__search-btn-inner {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+  &__search {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right:20px;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    background-color: $theme-color;
+    z-index: 100;
+
+    @include min(1700) {
+      right:50px;
+      left: 50px;
+    }
+
+    opacity: 0;
+    visibility: hidden;
+
+    .search-opened & {
+      opacity: 1;
+        visibility: visible;
+    }
+  }
+
+  &__center {
+    display:flex;
+    
+    align-items: center;
+    border-right: 1px solid #475361;
+    padding: 20px;
+    flex-grow: 1;
+
+    @include min(1700) {
+      padding: 0 50px;
+    }
+
+    @include min('sm') {
+      position: relative;
+    }
+  }
+
+  &__search-input {
+    flex: 1;
+    font-size: 18px;
+    &:focus {
+      outline: none;
+    }
+    @include placeholder {
+      color: #fff;
+      texttransform:uppercase;
+      font-size: 18px;
+    }
+    height:30px;
+    padding: 0 36px;
+    border-bottom: 1px solid #fff;
+  }
+
+  &__langs {
+    max-width: 200px;
+    padding: 20px;
+    display: flex;align-items: center;
+
+    @include min(1700) {
+      padding-left: 50px;
+    }
+
+    @include min($bp) {
+      width: 200 / 1920 * 100%;
+    }
+  }
+}
+
+.lang {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  &__selected {
+    display: flex;
+    align-items: center;
+    &::after {
+      content: '';
+      margin-left: 10px;
+      width: 14px;
+      height: 14px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMC43MjciIGhlaWdodD0iMzAuNzI3Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjkuOTk0IDEwLjE4M0wxNS4zNjMgMjQuODEyLjczMyAxMC4xODRhMi41IDIuNSAwIDExMy41MzYtMy41MzZsMTEuMDk1IDExLjA5M0wyNi40NjEgNi42NDdhMi41IDIuNSAwIDExMy41MzMgMy41MzZ6Ii8+PC9zdmc+);
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    
+    a {
+      display: block;
+      color: $theme-color;
+      padding: 0 25px;
+      background-color: #fff;
+
+      &:last-child {
+        padding-bottom: 5px;
+      }
+      &:first-child {
+        padding-top: 5px;
+      }
+
+      &:hover,
+      &.active {
+        color: $yellow;
+      }
+    } 
+  }
+
+  &:hover {
+    .lang__list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
