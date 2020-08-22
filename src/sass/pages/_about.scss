@@ -1,0 +1,346 @@
+$bp: 'md';
+
+.about {
+  --p: 20px;
+  @include min('xl') {
+    --p: 125px;
+  }
+  .statistic {
+    background-color: #f8f9f9;
+  }
+  overflow: hidden;
+  .breadcrumbs {
+    margin-bottom: 25px;
+
+    .container {
+      padding: 0;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    @include min($bp) {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__row{
+    @include min($bp) {
+      display: flex;
+    }
+  }
+  &__col{
+    @include min($bp) {
+      width: 50%;
+      max-width: 50%;
+      flex-basis: 50%;
+      flex: 1;
+      flex-shrink: 0;
+    }
+  }
+  &__head-col-left{
+
+  }
+  &__head-col-right{
+    padding-left: var(--p);
+
+    .section__ttl {
+      padding-bottom: 64px;
+      @include max($bp) {
+        padding-top: 50px;
+      } 
+    }
+  }
+  &__head-col-left-image{
+  }
+  &__head-text-wrp {
+    background-color: #f8f9f9;
+    position: relative;
+    padding-left: var(--p);
+    padding-right: var(--p);
+    margin-left: calc(var(--p) * -1);
+    padding-top: 87px;
+    padding-bottom: 87px;
+    position: relative;
+    flex-grow: 1;
+
+    &::before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      z-index: 10000;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+      top: -83px;
+      right: 35%;
+      transform: rotate(-28deg) scaleX(-1);
+    }
+  }
+  &__head-txt {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: (51/33);
+    color: $theme-color;
+    @include min($bp) {
+      font-size: 33px;
+      max-width: 420px;
+    }
+  }
+
+  &__personal {
+    background-color: #f8f9f9;
+
+    .row {
+      @include min($bp) {
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+  &__personal-count-col {
+    align-self: stretch;
+    flex-grow: 1;
+    flex-shrink: 0;
+    @include min($bp) {
+      padding-right: 230px;
+    }
+  }
+  &__personal-count {
+    background-color: $yellow;
+    text-align:center;
+    position: relative;
+    font-weight: 700;
+    padding: 55px 40px;
+   
+    max-width: 100%;
+    @include min($bp) {
+      width: 390px;
+    }
+    b{
+      color:#fff;
+      font-size: 166px;
+      line-height: 1;
+    }
+  }
+  &__personal-count-txt {
+    
+    @include min($bp) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: calc(100% - 20px);
+      text-align: left;
+    }
+    span {
+      display: inline-block;
+      background-color: #fff;
+      color: $theme-color;
+      font-size: 33px;
+      font-weight: 700;
+      padding: 0 10px;
+      margin: 5px 0;
+    }
+  }
+  &__personal-text-col {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgba(#17181f, 0.66)
+  }
+  .statistic {
+    padding: 62px 0;
+  }
+
+  &__row-box {
+    background-color: #f8f9f9;
+  }
+
+  &__item {
+    background-color: #f8f9f9;
+    position: relative;
+  }
+  .spacer {
+    background-color: #f8f9f9;
+    padding-top: 170px;
+  }
+  &__col-box {
+    &--left {
+    }
+  }
+  &__box {
+    color: $theme-color;
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    &--play {
+      &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background-image: url(../img/puzzle-blue.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 134px;
+        height: 134px;
+        z-index: 10000;
+        filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+        top: -50px;
+        left: -722px;
+        right: auto;
+        top: -60px;
+        transform: rotate(1deg) scaleX(-1);
+        z-index: 0;
+      }
+    }
+    @include min($bp) {
+      margin-right: -$gutter / 2 + px;
+      padding: 70px;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 215px;
+        background-color: #fff;
+        left: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    @include min('lg') {
+      padding: 130px;
+    }
+
+    @include min('xl') {
+      padding: 180px 300px 195px 185px;
+    }
+
+    .btn {
+      &:not(:hover) {
+        color: $theme-color;
+      }
+    }
+
+    &--left {
+      @include min($bp) {
+        margin-right: 0;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 670px;
+          background-color: #fff;
+          right: 100%;
+          left: auto;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  &__box-ttl {
+    font-size: 35px;
+    margin-bottom: 45px;
+    font-weight: 700;
+
+    @include min($bp) {
+      font-size: 48px;
+    }
+  }
+  &__box-txt {
+    margin-bottom: 47px;
+  }
+ 
+  &__col-image {
+   position: relative;
+   z-index: 1;
+    @include min($bp) {
+      position: absolute;
+      bottom: 160px;
+      top: 160px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/images/dots.png);
+      top: 165px;
+      bottom: -50px;
+      right: 225px;
+      left: -80px;
+      z-index: -1;
+
+      @include min($bp) {
+        bottom: -217px;
+      }
+    }
+    &--right {
+      right: 0;
+    }
+    &--left {
+      left: 0;
+
+      &::after {
+        left: 225px;
+        right: -80px;
+      }
+    }
+
+    &--arch {
+      &::before {
+        left: 5%;
+      top: -20px;
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      transform: rotate(119deg) scaleX(-1);
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+
+      @include min($bp) {
+        top: -67px;
+      }
+      }
+    }
+  }
+
+  &__box-tnch {
+    color: $yellow;
+    font-size: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    border-bottom: 2px solid currentColor;
+    top: 190px;
+    right: 100%;
+    white-space: nowrap;
+    transform-origin: bottom right;
+    transform: rotate(-90deg);
+    padding: 10px 0;
+    z-index: 1;
+
+
+    .about__box--left  & {
+      left: 100%;
+      right: auto;
+      top:350px;
+      transform-origin: top left;
+      border-bottom-style: none;
+      border-top: 2px solid currentColor;
+    }
+
+    &.pers {
+      top: 117px;
+    }
+
+    
+    @include max(1800) {
+      display:none;
+    }
+  }
+}

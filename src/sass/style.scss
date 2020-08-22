@@ -2,11 +2,8 @@
 @import "utils/_vars.scss";
 
 @charset 'UTF-8';
-//==========BASE==========//
-// @import 'vendors/reset/_reset';
 
 @import "vendors/reset/_normalize";
-// @import 'base/_devs';
 @import "components/_sprite-generated.scss";
 @import "base/_base";
 
@@ -25,10 +22,6 @@
 @import "layout/_header";
 @import "layout/_footer";
 @import "layout/_nav";
-// @import 'layout/_social';
-// @import 'layout/_modals';
-// @import 'layout/_sidebar';
-// @import 'layout/_titles';
 @import "layout/_forms";
 @import "layout/_breadcrumbs";
 @import "layout/_pagination";
@@ -43,23 +36,4 @@
 @import 'pages/_single';
 @import 'pages/_play';
 @import 'pages/_theatre';
-
-//==========VENDORS==========//
-// magnific-popup//
-// @import 'vendors/mfp/_magnific-popup';
-
-//Date picker//
-// @import 'vendors/pickmeup/_pickmeup';
-
-//slick//
-// @import 'vendors/slick/_slick';
-// @import 'vendors/slick/_slick-theme';
-
-//fotorama//
-// @import 'vendors/fotorama/_fotorama';
-
-//animate//
-// @import 'vendors/animate/_animate';
-
-//bootstrap-grid//
-// @import 'vendors/bootstrap_grid/_bootstrap';
+@import 'pages/_about';
