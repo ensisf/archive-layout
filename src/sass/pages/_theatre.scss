@@ -1,4 +1,94 @@
 .theatre {
+  .play__content {
+    padding-top: 51px;
+  }
+  &__plays  {
+    padding-bottom: 95px;
+    position: relative;
+
+    &::before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      z-index: 10000;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+      top: -83px;
+      right: 8%;
+      transform: rotate(-154deg) scaleX(-1);
+    }
+
+    .pagination {
+      padding-top: 80px;
+    }
+
+    .section__ttl  {
+      @include min('sm') {
+        font-size: 48px;
+      }
+    }
+  }
+
+   .blog__box::before {
+        height: 296px;
+    }
+
+  .play__aside {
+    position: relative;
+    align-self: flex-start;
+    padding-top: 0;
+    @include min('lg') {
+      width: 700/1700*100%;
+    }
+
+    &::after {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      background-image: url(../img/puzzle-blue.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 134px;
+      height: 134px;
+      z-index: 10000;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+      bottom: -50px;
+      left: -50px;
+      right: auto;
+      top: auto;
+      transform: rotate(-154deg) scaleX(-1);
+    }
+  }
+  &__main-ttl {
+    min-height: 224px;
+    background-color: $theme-color;
+  }
+  &__content{
+    padding: 50px;
+    position: relative;
+    z-index: 20000;
+    margin-bottom: 0;
+    
+    &::before {
+      right: auto;
+      top: 228px;
+      left: -184px;
+      transform: rotate(50deg) scaleX(1);
+    }
+
+    
+  }
+  &__content-image{
+    margin-bottom: 42px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
   &__gallery {
     position: relative;
     padding-top: 151px;
@@ -16,10 +106,10 @@
       height: 134px;
       z-index: 10000;
       filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
-
       top: -83px;
       left: 5%;
       transform: rotate(-36deg) scaleX(-1);
+
     }
 
 
@@ -34,6 +124,10 @@
       height: 147px;
       top: 155px;
       right: 3%;
+      
+      @include max("sm") {
+        top: 185px;
+      }
     }
     
     .section__ttl  {

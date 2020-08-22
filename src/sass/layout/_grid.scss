@@ -1,11 +1,12 @@
 // grid
+
 .container {
   margin: 0 auto;
   max-width: 100%;
-  width: $container-width + $gutter + px;
-  padding-left: $gutter/2 + px;
+  width: $container-width + 40 + px;
+  padding-left: 40/2 + px;
   position: relative;
-  padding-right: $gutter/2 + px;
+  padding-right: 40/2 + px;
 }
 
 .row {

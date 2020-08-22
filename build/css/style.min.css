@@ -728,6 +728,9 @@ textarea {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    @media (max-width: 991px) {
+      .new-card__footer {
+        font-size: 16px; } }
   .new-card__views {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1060,11 +1063,13 @@ textarea {
     background: none;
     border: none;
     color: currentColor;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear; }
     .player__btn:hover {
-      color: #ecc853; }
+      -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+              transform: scale(0.9); }
     .player__btn:focus {
       outline: none; }
     .player__btn svg {
@@ -1094,10 +1099,10 @@ textarea {
 .container {
   margin: 0 auto;
   max-width: 100%;
-  width: 1718px;
-  padding-left: 9px;
+  width: 1740px;
+  padding-left: 20px;
   position: relative;
-  padding-right: 9px; }
+  padding-right: 20px; }
 
 .row {
   position: relative;
@@ -1489,7 +1494,7 @@ input[type='submit'] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 85px;
+  padding: 85px 0;
   text-align: center; }
   @media (max-width: 767px) {
     .pagination {
@@ -1814,7 +1819,8 @@ input[type='submit'] {
     background-color: #f8f9f9;
     padding-bottom: 160px; }
   .person__cnt-inner {
-    position: relative; }
+    position: relative;
+    margin-bottom: 50px; }
     .person__cnt-inner::before {
       content: '';
       height: 95px;
@@ -2318,6 +2324,89 @@ input[type='submit'] {
             -ms-transform: translateY(-90px);
                 transform: translateY(-90px); } }
 
+.theatre .play__content {
+  padding-top: 51px; }
+
+.theatre__plays {
+  padding-bottom: 95px;
+  position: relative; }
+  .theatre__plays::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-yellow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 134px;
+    height: 134px;
+    z-index: 10000;
+    -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+            filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+    top: -83px;
+    right: 8%;
+    -webkit-transform: rotate(-154deg) scaleX(-1);
+        -ms-transform: rotate(-154deg) scaleX(-1);
+            transform: rotate(-154deg) scaleX(-1); }
+  .theatre__plays .pagination {
+    padding-top: 80px; }
+  @media (min-width: 768px) {
+    .theatre__plays .section__ttl {
+      font-size: 48px; } }
+
+.theatre .blog__box::before {
+  height: 296px; }
+
+.theatre .play__aside {
+  position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 0; }
+  @media (min-width: 1200px) {
+    .theatre .play__aside {
+      width: 41.17647%; } }
+  .theatre .play__aside::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-image: url(../img/puzzle-blue.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 134px;
+    height: 134px;
+    z-index: 10000;
+    -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+            filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+    bottom: -50px;
+    left: -50px;
+    right: auto;
+    top: auto;
+    -webkit-transform: rotate(-154deg) scaleX(-1);
+        -ms-transform: rotate(-154deg) scaleX(-1);
+            transform: rotate(-154deg) scaleX(-1); }
+
+.theatre__main-ttl {
+  min-height: 224px;
+  background-color: #19283a; }
+
+.theatre__content {
+  padding: 50px;
+  position: relative;
+  z-index: 20000;
+  margin-bottom: 0; }
+  .theatre__content::before {
+    right: auto;
+    top: 228px;
+    left: -184px;
+    -webkit-transform: rotate(50deg) scaleX(1);
+        -ms-transform: rotate(50deg) scaleX(1);
+            transform: rotate(50deg) scaleX(1); }
+
+.theatre__content-image {
+  margin-bottom: 42px; }
+  .theatre__content-image img {
+    display: block;
+    width: 100%; }
+
 .theatre__gallery {
   position: relative;
   padding-top: 151px;
@@ -2351,6 +2440,9 @@ input[type='submit'] {
     height: 147px;
     top: 155px;
     right: 3%; }
+    @media (max-width: 767px) {
+      .theatre__gallery::after {
+        top: 185px; } }
   @media (min-width: 768px) {
     .theatre__gallery .section__ttl {
       font-size: 48px; } }

@@ -22,10 +22,10 @@
     background: none;
     border: none;
     color: currentColor;
-    transition: 0.3s;
+    transition: 0.3s linear;
 
     &:hover {
-      color: $yellow;
+     transform: scale(0.9);
     }
 
     &:focus {

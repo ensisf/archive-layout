@@ -1,7 +1,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  padding: 85px;
+  padding: 85px 0;
   text-align: center;
 
   @include max("sm") {
