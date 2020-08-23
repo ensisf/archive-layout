@@ -18,10 +18,7 @@
         height: 540px !important;
       }
       @include min('md') {
-        height: 740px !important;
-      }
-      @include min('lg') {
-        height: 940px !important;
+        height: 700px !important;
       }
     }
   }

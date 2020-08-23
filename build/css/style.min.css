@@ -579,6 +579,12 @@ textarea {
   display: inline-block;
   vertical-align: middle; }
 
+.slick-slider {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto; }
+
 .btn {
   position: relative;
   display: inline-block;
@@ -726,7 +732,9 @@ textarea {
     color: #1a283a;
     font-weight: bold;
     font-size: 28px;
+    line-height: 1.2;
     margin-top: 0;
+    text-align: left;
     margin-bottom: 20px; }
     .new-card__ttl:hover {
       color: #ecc853; }
@@ -734,7 +742,8 @@ textarea {
       .new-card__ttl {
         font-size: 36px; } }
   .new-card__box {
-    padding: 36px 20px 20px; }
+    padding: 36px 20px 20px;
+    text-align: justify; }
     @media (min-width: 992px) {
       .new-card__box {
         padding: 36px 50px 45px; } }
@@ -802,8 +811,8 @@ textarea {
     font-weight: 500;
     border-bottom: 1px solid currentColor;
     font-size: 15px; }
-    .archive-card__link:hover {
-      color: #fff; }
+  .archive-card a:hover {
+    color: #fff; }
 
 .main-slider {
   overflow: hidden; }
@@ -998,21 +1007,26 @@ textarea {
   .abc::after {
     position: absolute;
     pointer-events: none;
-    top: -68px;
+    top: -50px;
     right: 69px;
     content: "";
     background-image: url(../img/puzzle-yellow.svg);
     background-repeat: no-repeat;
     -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.77));
             filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.77));
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
     -webkit-transform: rotate(-239deg) scaleX(-1);
         -ms-transform: rotate(-239deg) scaleX(-1);
             transform: rotate(-239deg) scaleX(-1); }
+    @media (min-width: 768px) {
+      .abc::after {
+        width: 140px;
+        height: 140px;
+        top: -80px; } }
   .abc__inner {
     overflow: auto;
     font-size: 0;
@@ -1628,6 +1642,8 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .lang__selected:hover {
+      color: #ecc853; }
     .lang__selected::after {
       content: '';
       margin-left: 10px;
@@ -2025,10 +2041,7 @@ input[type='submit'] {
         height: 540px !important; } }
     @media (min-width: 992px) {
       .sliders__main .slick-slide {
-        height: 740px !important; } }
-    @media (min-width: 1200px) {
-      .sliders__main .slick-slide {
-        height: 940px !important; } }
+        height: 700px !important; } }
 
 .sliders__nav {
   display: -webkit-box;
@@ -3186,9 +3199,12 @@ input[type='submit'] {
         padding: 130px; } }
     @media (min-width: 1500px) {
       .about__box {
-        padding: 180px 300px 195px 185px; } }
+        padding: 180px 200px 195px 185px; } }
     .about__box .btn:not(:hover) {
       color: #19283a; }
+    .about__box .btn:hover {
+      color: #ecc853;
+      border-color: #ecc853; }
     @media (min-width: 992px) {
       .about__box--left {
         margin-right: 0; }
@@ -3209,7 +3225,8 @@ input[type='submit'] {
       .about__box-ttl {
         font-size: 48px; } }
   .about__box-txt {
-    margin-bottom: 47px; }
+    margin-bottom: 47px;
+    text-align: justify; }
   .about__col-image {
     position: relative;
     z-index: 1; }
@@ -3337,15 +3354,12 @@ input[type='submit'] {
     width: 147px;
     height: 147px;
     top: 172px;
-    left: 8%;
+    left: -70px;
     z-index: 10000;
     -webkit-transform: rotate(-180deg) scale(-1);
         -ms-transform: rotate(-180deg) scale(-1);
             transform: rotate(-180deg) scale(-1);
     -webkit-filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
             filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33)); }
-    @media (min-width: 1800px) {
-      .search-results__container::after {
-        left: -70px; } }
 
 /*# sourceMappingURL=../maps/style.min.css.map */

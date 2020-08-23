@@ -227,6 +227,9 @@ $bp: 1700;
   &__selected {
     display: flex;
     align-items: center;
+    &:hover {
+        color: $yellow;
+      }
     &::after {
       content: '';
       margin-left: 10px;

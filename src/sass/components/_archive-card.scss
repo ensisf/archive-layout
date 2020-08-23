@@ -14,7 +14,7 @@
   &__ttl {
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 3px;
+    margin-bottom: 3px; 
   }
   &__content {
     font-size: 18px;
@@ -40,6 +40,10 @@
     border-bottom: 1px solid currentColor;
     font-size: 15px;
 
+    
+  }
+
+  a{
     &:hover {
       color: #fff;
     }

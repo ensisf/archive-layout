@@ -3,18 +3,24 @@
   &::after {
     position: absolute;
     pointer-events: none;
-    top: -68px;
+    top: -50px;
     right: 69px;
     content: "";
     background-image: url(../img/puzzle-yellow.svg);
     background-repeat: no-repeat;
     filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.77));
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
     transform: rotate(-239deg) scaleX(-1);
+
+    @include min('sm') {
+      width: 140px;
+    height: 140px;
+    top: -80px;
+    }
   }
   &__inner {
     overflow: auto;

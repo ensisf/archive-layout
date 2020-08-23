@@ -15,7 +15,9 @@
     color: #1a283a;
     font-weight: bold;
     font-size: 28px;
+    line-height: 1.2;
     margin-top: 0;
+    text-align: left;
 
     &:hover {
       color: $yellow;
@@ -29,6 +31,7 @@
   }
   &__box {
     padding: 36px 20px 20px;
+    text-align: justify;
 
     @include min("md") {
       padding: 36px 50px 45px;

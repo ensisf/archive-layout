@@ -214,12 +214,17 @@ $bp: 'md';
     }
 
     @include min('xl') {
-      padding: 180px 300px 195px 185px;
+      padding: 180px 200px 195px 185px;
     }
 
     .btn {
       &:not(:hover) {
         color: $theme-color;
+      }
+
+      &:hover {
+        color: $yellow;
+        border-color: $yellow;
       }
     }
 
@@ -250,6 +255,7 @@ $bp: 'md';
   }
   &__box-txt {
     margin-bottom: 47px;
+    text-align: justify;
   }
  
   &__col-image {
@@ -323,7 +329,6 @@ $bp: 'md';
     transform: rotate(-90deg);
     padding: 10px 0;
     z-index: 1;
-
 
     .about__box--left  & {
       left: 100%;
