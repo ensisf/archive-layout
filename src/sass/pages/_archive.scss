@@ -1,6 +1,8 @@
 .archive {
   &__txt-img {
     margin-right: 45px;
+    flex-shrink: 0;
+    width: 67px;
   }
 
   &__txt {

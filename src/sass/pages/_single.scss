@@ -15,18 +15,19 @@
     position: relative;
     
     &::before {
-      content: "";
+      pointer-events: none;
+      content: '';
       position: absolute;
-      background-image: url(../img/images/last-news.png);
+      background-image: url(../img/puzzle-yellow.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: center center;
-      pointer-events: none;
-      left: 70%;
-      top: -150px;
-      width: 350px;
-      height: 350px;
-      z-index: 1;
+      width: 134px;
+      height: 134px;
+      z-index: 10000;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.33));
+      top: -64px;
+      right: 15%;
+      transform: rotate(-182deg) scale(-1);
     }
 
     img {
@@ -46,6 +47,13 @@
         padding-bottom: 15px;
       }
     }
+  }
+  &__cnt {
+    h2 {
+      @extend .ttl-line;
+    }
+    color: $theme-color;
+    font-weight: 500;
   }
   &__last{
     @include min('md'){

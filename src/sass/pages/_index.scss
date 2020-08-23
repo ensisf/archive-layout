@@ -39,28 +39,62 @@
 }
 
 .last-news {
-  background-image: url(../img/images/last-news-bg.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom center;
   overflow: hidden;
 
   .row {
     position: relative;
 
     &::before {
-      content: "";
       position: absolute;
-      background-image: url(../img/images/last-news.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center center;
       pointer-events: none;
       left: 45%;
-      top: -150px;
-      width: 350px;
-      height: 350px;
-      z-index: 1;
+      top: -70px;
+      content: "";
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.77));
+      width: 140px;
+      height: 140px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      transform: rotate(-239deg) scaleX(-1);
+    }
+  }
+
+  .container {
+    &::before {
+      position: absolute;
+      pointer-events: none;
+      left: -46px;
+      top: 84%;
+      content: "";
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.77));
+      width: 170px;
+      height: 170px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      transform: rotate(-398deg) scaleX(-1);
+    }
+    &::after {
+      position: absolute;
+      pointer-events: none;
+      right: -98px;
+      top: 84%;
+      content: "";
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.77));
+      width: 170px;
+      height: 170px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      transform: rotate(-153deg) scaleX(-1);
+      z-index: -1;
     }
   }
 }
@@ -114,7 +148,7 @@
 }
 
 .digit-archive {
-  background-image: url(../img/images/digit-archive-bg.png);
+  background-image: url(../img/images/digit-archive-bg.svg);
   background-repeat: no-repeat;
   background-position: right center;
   overflow: hidden;
@@ -134,18 +168,20 @@
     position: relative;
 
     &::before {
-      content: "";
       position: absolute;
-      background-image: url(../img/images/digit-archive.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center center;
       pointer-events: none;
-      left: -105px;
-      top: 0;
-      width: 275px;
-      height: 340px;
-      z-index: 1;
+      left: -62px;
+      top: 92px;
+      content: "";
+      background-image: url(../img/puzzle-yellow.svg);
+      background-repeat: no-repeat;
+      filter: drop-shadow(0px 0px 133px rgba(236, 200, 83, 0.77));
+      width: 140px;
+      height: 140px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      transform: rotate(-239deg) scaleX(-1);
     }
   }
 }

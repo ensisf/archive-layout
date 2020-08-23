@@ -17,7 +17,7 @@
     position: relative;
 
     &:hover {
-      opacity: 0.7;
+      color: $yellow;
     }
 
     &:not(:last-child) {

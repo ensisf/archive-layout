@@ -1,6 +1,13 @@
 .footer {
   padding: 70px 0 0;
 
+  a {
+    &:hover {
+      color: $yellow;
+      opacity: 1;
+    }
+  }
+
   .col {
     margin-bottom: 50px;
   }
@@ -55,10 +62,6 @@
     a {
       display: flex;
       align-items: center;
-
-      &:hover {
-        opacity: 0.7;
-      }
     }
 
     i {

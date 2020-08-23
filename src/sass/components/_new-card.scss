@@ -11,11 +11,15 @@
       object-fit: cover;
     }
   }
-  &__ttl {
+  &__ttl { 
     color: #1a283a;
     font-weight: bold;
     font-size: 28px;
     margin-top: 0;
+
+    &:hover {
+      color: $yellow;
+    }
 
     margin-bottom: 20px;
 

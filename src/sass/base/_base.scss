@@ -131,3 +131,22 @@ textarea {
 .has-shadow {
   box-shadow: 0px 0px 233px 0px rgba(0, 0, 0, 0.15);
 }
+
+.blue-wave-icon {
+  background-image: url(../img/blue-wave-icon.svg);
+  background-size: contain;
+  width: 66px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.white-wave-icon {
+  background-image: url(../img/white-wave-icon.svg);
+  background-size: contain;
+  width: 66px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}

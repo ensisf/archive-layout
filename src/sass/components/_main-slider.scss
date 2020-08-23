@@ -145,9 +145,16 @@
     border: none;
     padding: 10px;
     outline: none;
+    transition: 0.2s;
 
     &:hover {
-      opacity: 0.7;
+      color: $yellow;
+    }
+  }
+
+  .btn  {
+    &:hover {
+      color: $yellow;
     }
   }
 }
